@@ -1,5 +1,5 @@
-const city = 'Rostov'
-let temp = 11
+const city = 'Rostov';
+let temp = 11 ;
 
 console.log(`В городе ${city} сейчас ${temp} градусов`);
 
