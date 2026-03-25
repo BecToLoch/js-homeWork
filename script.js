@@ -1,49 +1,40 @@
 /*
-const city = 'Rostov'
+console.log(2 * 2 + 2);
 
-console.log(typeof city);
-
-const numb = 12
-
-console.log(typeof numb);
-
-const isTrue = true
-
-console.log(typeof isTrue);
-
-let blabla
-
-console.log(typeof blabla);
+let sin54 = 54 * (Math.PI / 180)
+let cos16 = 16 * (Math.PI / 180)
 */
 
-/* разница между ссылочным и примитивным типом данных в том что 
-в ссылочном копируется адрес в памяти в то время как в примитивном копируется само содержимое
-так же расход памяти уменьшается так как в ссылочном копируется только адрес
- в то время как в примитивном все содержаание 
+/*
+const result = Math.sin(sin54) * Math.cos(cos16) ** 2
+
+console.log(Math.ceil(result));
 */
 
-let a = 10
-let b = a // здесь копируется само значение переменной а в b
+/*
+const part1 = 16 * Math.sqrt(13.2 * 71.90) / (2.4 / 7 ** 4)
+const part2 = 3 ** Math.sqrt(49)
+const multiplier = 2 ** 7
 
-b = 20 // и изминив b вывод будет разный 
+const result = (part1 + part2) * multiplier
 
-console.log(a, b); // по итогу а остается = 10 а b уже будет =20
+console.log(Math.ceil(result));
+*/ 
 
-// но если использовать ссылочный тип то такого не бдует
+/*
+lеt a = 6
+let b = 5
+let result = ''
 
-let user = {
-  name: 'Ivan'
+if (a % 2 === 0 ) result += ' a четное число'
+if (b % 2 === 0 ) result += ' b четное число'
+
+if (result !== ''){
+  console.log(result);
+}else {
+  console.log('четных нет');
 }
+*/
 
-let user2 = user // здесь уже копируется не обьект а ссылка на него 
-// и изменив одно меняются оба
-
-user2.name= 'Nikita'
-
-console.log(user.name);
-console.log(user2.name);
-
-
-
-
-
+const name = prompt ('Введите вше имя') || 'Guest'
+console.log('Hello', name);
