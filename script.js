@@ -1,32 +1,39 @@
 /*
-for(let i = 1; i <= 10; i++){
-  console.log(i);
-  
-}
-*/
+let text = 'javaScript is fun' 
 
+console.log(text.includes(fun));
+*/
 /*
-let i = 1
-let sum = 0
-while(i <= 100){
-  
-  sum = sum + i
-  i++
+let bla = false
+const masiv = [1, `${bla}`, '', 'text', 'lol']
+let isFalse = false
+
+for(let key of masiv){
+  while(key == 'false'){
+    isFalse = true
+    console.log(masiv);
+    break
+  }
 }
-console.log(sum);
+if(!isFalse){
+
+  console.log('by');
+}
+*/
+/*
+let firstName = 'John'
+let lastName = 'Doe'
+let occupation = 'developmer'
+
+console.log(`Hello my name is ${firstName} ${lastName}. I am a software ${occupation}`);
 */
 
-for(let i = 2; i <=100; i++){
-  let isPrime = true
+//console.log(null === undefined);
+//console.log(null == undefined);
+/*
+в первом случае будет лож поскольку сравнивается по типу данных 
+а вов тором правда потому что сравнивает по значению которое у обоих отсутствует
+*/
 
-  for(let j = 2; j < i; j++){
-    if(i % j === 0){
-      isPrime = false
-      break
-    }
-  }
-  if(isPrime){
-    console.log(i);
-    
-  }
-}
+console.log(1 + '1');
+// происходит просто слияние в строку потому что одно из значений строка
