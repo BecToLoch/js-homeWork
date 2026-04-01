@@ -1,54 +1,64 @@
-/*
-const scrt = [2, 3, 12, 15, 224, 11]
-
-const scrt2 = scrt.map(num => num * num )
-console.log(scrt2);
-*/
+const masiv = [1, 2, 3, 44, 21]
 
 /*
-const num = [1, 2, 2, 3, 4, 5, 5, 5, 6]
-
-const num2 = num.filter((item, index) => {
-      return num.indexOf(item) === index
-})
-console.log(num2);
-*/
-
-/*
-const number = [2, 3, 4, 12, 42]
-
-const number2 = number.reduce((total, num) => total + num, 0)
-
-console.log(number2);
-*/
-
-/*
-const number = [2, 3, 4, 12, 42]
-
-function reversNumber(arr) {
-  let revers = []
-
-  for (let i = number.length -1; i >= 0; i--) {
-    revers.push(arr[i])    
-  }
-  return revers
+function value (arr){
+  const sum = arr.reduce((acc, number) => acc + number, 0)
+  return sum / arr.length
 }
-console.log(reversNumber(number));
+
+console.log(value(masiv));
 */
 
-const num = [1, 3, 42, 2]
+const person = {
+  name: 'Ivan',
+  age: 21,
+  country: 'Russia'
+}
 
-num.push(23)// работает добовляет число 23
-num.shift(1)// рвбответ удоляем первое число 
-//num = [11, 23, 41]// не работает так как const нельзя переопределить 
+/*
+const {name: userName, age: userAge} = person
 
-console.log(num);
+console.log(userName, userAge);
+*/
+ 
+/*
+const masiv2 = [12, 223, 42, 
+  {
+    name: 'ivan',
+    age: 21,
+    hobbies: ['coding', 'gaming'],
+    adress: {city: 'Moscow'}
+  }
+]
 
-let num2 = ['dwdwf', 243, true]
-let number = num2.map(String)// работает присваеваем всем переменным значение строки
-num2 = [123123 , 'fefef', false]// работает так как let можно переопределить
+const [ , , fortyTwo, {name, age, adress: {city}}] = masiv2
 
-console.log(number);
-console.log(num2);
+console.log(fortyTwo);
+console.log(name);
+console.log(city);
+*/
 
+/*
+const masiv3 = [1, 2, 32, 24]
+
+const newMasiv = ['Start', 0, ...masiv3, 100, 'End']
+
+console.log(newMasiv);
+*/
+
+const user = {
+  id: 1,
+  name: 'Ivan',
+  age: 21,
+  email: 'ivan@example.com'
+};
+
+function removeProperty(obj, keyToDelete) {
+  const { [keyToDelete]: deleted, ...rest } = obj;
+  return rest;
+}
+
+const result = removeProperty(user, 'email');
+
+console.log(result); 
 
