@@ -1,58 +1,60 @@
-/*
-const text = prompt('введите слово')
+// 1 задание
+// Возьмите следующий код и приведите его в соответствие с общепринятым стандартом форматирования,
+// соблюдая отступы, выравнивание и правила расстановки пробелов:
+function multiply(a, b) {
+  return a * b;
+}
+const person = { name: 'Alice', age: 30 };
 
-const palindromom = (str) => {
+  if(person.age > 18) {
+    console.log('Adult');
+  }else {
+    console.log('Minor');
+  }
 
-  const revers = str.split().reverse().join()
-  return str === revers
+// 2 задание
+// Представьте, что вы работаете в команде, и вам нужно сделать код понятным для всех участников.
+// Перепишите следующий код, используя понятные и логичные имена переменных и функций:
+function calculateProduct (firstNumber, secondNumber) {
+  return firstNumber * secondNumber;
 }
 
-console.log(palindromom(text));
-*/
+const totalResult  = calculateProduct(5, 10);
 
-/*
-const text = prompt('введите текст')
+// 3 задание
+// Убедитесь, что в коде используется единый стиль оформления. В следующем коде присутствуют смешанные стили кавычек,
+// разное использование var, let, и const, а также различное форматирование объектов и массивов. Исправьте код:
+let items = ['apple', 'banana', 'orange'];
+let price = { apple: 1, banana: 2, orange: 3 };
 
-const a = (str) => {
-  return str.split(' ').reduce((short, current) =>{
-    return current.length < short.length ? current : short
-  })
-}
-console.log(a(text));
-*/
+const total = price.apple + price.banana + price.orange;
 
-/*
-const number = prompt('введите номер')
-
-const createPhoneNumber = (num) => {
-  return num.slice(0, 1) + ' (' + (num.slice(1, 4)) + ') ' + num.slice(4, 7) + '-' + num.slice(7,10)
-  
+function calculateTotal(itemsList) {
+  return itemsList.reduce((sum, item) => sum + item.price, 0);
 }
 
-console.log(createPhoneNumber(number));
-*/
+// 4 задание
+// Создайте функцию validateForm, которая принимает объект формы с полями name, email и password.
+// Она должна выполнять проверки для каждого поля. Если какое-то поле не заполнено или содержит неверные данные,
+// функция должна сразу возвращать ошибку, используя guard expressions. Если все данные верны,
+// функция должна возвращать сообщение "Форма успешно отправлена".
 
-/*
-const masiv = [1, 243, 21, 54, 12]
-
-const srcNumber = (arr) => {
-  const min = Math.min(...arr)
-  const max = Math.max(...arr)
-
-  return `минимальное чилсо масcива ${min}, а максимальное ${max}`
-
+const user = {
+  name: 'Ivan',
+  email: 'grgfde@gmail.com',
+  password: '12fe4124'
 }
 
-console.log(srcNumber(masiv));
-*/
+const validateForm = (user) =>{
 
-const masiv = [1, 233, 12, 2, 42, 421]
+  if(typeof user.name !== 'string' || user.name.trim() === '') return 'введите коректно имя'
 
-const sortMasiv = (arr) => {
-  return [...arr].sort((a, b) => a - b)
+  if (typeof user.email !== 'string' || user.email.trim() === '' 
+  || !user.email.includes('@') || !user.email.split('@')[1]?.includes('.')) return "введите коректно почту";
+
+  if(typeof user.password !== 'string' ||user.password.trim() === '') return 'введите пароль верно'
+
+  return 'Форма отправлена успешно'
 }
 
-const newSortMasiv = sortMasiv(masiv)
-
-console.log(masiv);
-console.log(newSortMasiv);
+console.log(validateForm(user));
