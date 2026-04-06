@@ -1,64 +1,58 @@
-const masiv = [1, 2, 3, 44, 21]
-
 /*
-function value (arr){
-  const sum = arr.reduce((acc, number) => acc + number, 0)
-  return sum / arr.length
+const text = prompt('введите слово')
+
+const palindromom = (str) => {
+
+  const revers = str.split().reverse().join()
+  return str === revers
 }
 
-console.log(value(masiv));
+console.log(palindromom(text));
 */
 
-const person = {
-  name: 'Ivan',
-  age: 21,
-  country: 'Russia'
+/*
+const text = prompt('введите текст')
+
+const a = (str) => {
+  return str.split(' ').reduce((short, current) =>{
+    return current.length < short.length ? current : short
+  })
+}
+console.log(a(text));
+*/
+
+/*
+const number = prompt('введите номер')
+
+const createPhoneNumber = (num) => {
+  return num.slice(0, 1) + ' (' + (num.slice(1, 4)) + ') ' + num.slice(4, 7) + '-' + num.slice(7,10)
+  
 }
 
-/*
-const {name: userName, age: userAge} = person
-
-console.log(userName, userAge);
-*/
- 
-/*
-const masiv2 = [12, 223, 42, 
-  {
-    name: 'ivan',
-    age: 21,
-    hobbies: ['coding', 'gaming'],
-    adress: {city: 'Moscow'}
-  }
-]
-
-const [ , , fortyTwo, {name, age, adress: {city}}] = masiv2
-
-console.log(fortyTwo);
-console.log(name);
-console.log(city);
+console.log(createPhoneNumber(number));
 */
 
 /*
-const masiv3 = [1, 2, 32, 24]
+const masiv = [1, 243, 21, 54, 12]
 
-const newMasiv = ['Start', 0, ...masiv3, 100, 'End']
+const srcNumber = (arr) => {
+  const min = Math.min(...arr)
+  const max = Math.max(...arr)
 
-console.log(newMasiv);
-*/
+  return `минимальное чилсо масcива ${min}, а максимальное ${max}`
 
-const user = {
-  id: 1,
-  name: 'Ivan',
-  age: 21,
-  email: 'ivan@example.com'
-};
-
-function removeProperty(obj, keyToDelete) {
-  const { [keyToDelete]: deleted, ...rest } = obj;
-  return rest;
 }
 
-const result = removeProperty(user, 'email');
+console.log(srcNumber(masiv));
+*/
 
-console.log(result); 
+const masiv = [1, 233, 12, 2, 42, 421]
 
+const sortMasiv = (arr) => {
+  return [...arr].sort((a, b) => a - b)
+}
+
+const newSortMasiv = sortMasiv(masiv)
+
+console.log(masiv);
+console.log(newSortMasiv);
