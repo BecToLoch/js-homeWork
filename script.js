@@ -1,60 +1,44 @@
-// 1 задание
-// Возьмите следующий код и приведите его в соответствие с общепринятым стандартом форматирования,
-// соблюдая отступы, выравнивание и правила расстановки пробелов:
-function multiply(a, b) {
-  return a * b;
+/*
+function hasEvenNumber(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] % 2 === 0) {
+      return true;
+    }
+  }  
+  return false;
 }
-const person = { name: 'Alice', age: 30 };
 
-  if(person.age > 18) {
-    console.log('Adult');
-  }else {
-    console.log('Minor');
+
+console.log(hasEvenNumber([1, 3, 4, 5])); // Ожидается: true
+*/
+
+/*
+function calculateAverage(numbers) {
+  let sum = 0;
+  for (let i = 0; i < numbers.length; i++) { 
+    sum += numbers[i];
+    
   }
-
-// 2 задание
-// Представьте, что вы работаете в команде, и вам нужно сделать код понятным для всех участников.
-// Перепишите следующий код, используя понятные и логичные имена переменных и функций:
-function calculateProduct (firstNumber, secondNumber) {
-  return firstNumber * secondNumber;
+  return sum / numbers.length;
+  
 }
 
-const totalResult  = calculateProduct(5, 10);
+console.log(calculateAverage([2, 4, 6])); // Ожидается: 4
+*/
 
-// 3 задание
-// Убедитесь, что в коде используется единый стиль оформления. В следующем коде присутствуют смешанные стили кавычек,
-// разное использование var, let, и const, а также различное форматирование объектов и массивов. Исправьте код:
-let items = ['apple', 'banana', 'orange'];
-let price = { apple: 1, banana: 2, orange: 3 };
+console.log('feve');
 
-const total = price.apple + price.banana + price.orange;
+function findLargestNumber(arr) {
 
-function calculateTotal(itemsList) {
-  return itemsList.reduce((sum, item) => sum + item.price, 0);
+  let largest = arr[0];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > largest) {
+      largest = arr[i];      
+    }
+  }
+  return largest;
+ 
 }
 
-// 4 задание
-// Создайте функцию validateForm, которая принимает объект формы с полями name, email и password.
-// Она должна выполнять проверки для каждого поля. Если какое-то поле не заполнено или содержит неверные данные,
-// функция должна сразу возвращать ошибку, используя guard expressions. Если все данные верны,
-// функция должна возвращать сообщение "Форма успешно отправлена".
+console.log(findLargestNumber([-10, -20, -30])); // Ожидается: -10
 
-const user = {
-  name: 'Ivan',
-  email: 'grgfde@gmail.com',
-  password: '12fe4124'
-}
-
-const validateForm = (user) =>{
-
-  if(typeof user.name !== 'string' || user.name.trim() === '') return 'введите коректно имя'
-
-  if (typeof user.email !== 'string' || user.email.trim() === '' 
-  || !user.email.includes('@') || !user.email.split('@')[1]?.includes('.')) return "введите коректно почту";
-
-  if(typeof user.password !== 'string' ||user.password.trim() === '') return 'введите пароль верно'
-
-  return 'Форма отправлена успешно'
-}
-
-console.log(validateForm(user));
